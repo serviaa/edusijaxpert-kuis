@@ -1,3 +1,5 @@
+'use client'; 
+
 export default function HomePage() {
   return (
     <div
@@ -15,29 +17,36 @@ export default function HomePage() {
         justifyContent: 'center',
       }}
     >
-      <h1 style={{
-        fontSize: '2.7rem',
-        color: '#ec4899',
-        marginBottom: '24px',
-        fontWeight: 'bold',
-        letterSpacing: '2px',
-        textShadow: '0 2px 8px #f9a8d4',
-      }}>
+      <h1
+        style={{
+          fontSize: '2.7rem',
+          color: '#ec4899',
+          marginBottom: '24px',
+          fontWeight: 'bold',
+          letterSpacing: '2px',
+          textShadow: '0 2px 8px #f9a8d4',
+        }}
+      >
         🎀 Selamat Datang di Kuis EduSijaXpert
       </h1>
-      <p style={{
-        fontSize: '1.3rem',
-        color: '#be185d',
-        marginBottom: '32px',
-        background: 'rgba(255, 228, 242, 0.7)',
-        padding: '16px 24px',
-        borderRadius: '12px',
-        boxShadow: '0 2px 8px #f9a8d4',
-        display: 'inline-block',
-      }}>
-        Uji kemampuan matematika dasar Anda.<br />
+
+      <p
+        style={{
+          fontSize: '1.3rem',
+          color: '#be185d',
+          marginBottom: '32px',
+          background: 'rgba(255, 228, 242, 0.7)',
+          padding: '16px 24px',
+          borderRadius: '12px',
+          boxShadow: '0 2px 8px #f9a8d4',
+          display: 'inline-block',
+        }}
+      >
+        Uji kemampuan matematika dasar Anda.
+        <br />
         Klik tombol di bawah untuk memulai kuis!
       </p>
+
       <a href="/quiz" style={{ textDecoration: 'none' }}>
         <button
           style={{
@@ -54,8 +63,8 @@ export default function HomePage() {
             letterSpacing: '1px',
             transition: 'background 0.3s, transform 0.2s',
           }}
-          onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+          onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+          onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
         >
           💖 Mulai Kuis
         </button>
