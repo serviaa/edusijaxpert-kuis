@@ -126,9 +126,6 @@ export default function QuizPage() {
                           ? 'border-pink-500 bg-pink-500'
                           : 'border-pink-300'
                       }`}>
-                        {selectedAnswer === option && (
-                          <div className="w-3 h-3 rounded-full bg-white m-1"></div>
-                        )}
                       </div>
                       <span className="text-pink-700">{option}</span>
                     </div>

@@ -50,7 +50,6 @@ export default function HomePage() {
       <a href="/quiz" style={{ textDecoration: 'none' }}>
         <button
           style={{
-            marginTop: '20px',
             padding: '16px 36px',
             fontSize: '1.2rem',
             background: 'linear-gradient(90deg, #ec4899 0%, #f472b6 100%)',
