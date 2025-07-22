@@ -4,26 +4,36 @@ export default function HomePage() {
       style={{
         textAlign: 'center',
         marginTop: '60px',
-        background: 'linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%)',
+        background: 'linear-gradient(135deg, #f9a8d4 0%, #fdf2f8 100%)',
         minHeight: '100vh',
         padding: '40px',
-        borderRadius: '16px',
-        boxShadow: '0 8px 32px rgba(60, 60, 120, 0.15)',
+        borderRadius: '24px',
+        boxShadow: '0 8px 32px rgba(240, 46, 170, 0.15)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <h1 style={{
-        fontSize: '2.5rem',
-        color: '#3b82f6',
-        marginBottom: '20px',
+        fontSize: '2.7rem',
+        color: '#ec4899',
+        marginBottom: '24px',
         fontWeight: 'bold',
         letterSpacing: '2px',
+        textShadow: '0 2px 8px #f9a8d4',
       }}>
-        Selamat Datang di Kuis EduSijaXpert
+        🎀 Selamat Datang di Kuis EduSijaXpert
       </h1>
       <p style={{
-        fontSize: '1.2rem',
-        color: '#374151',
-        marginBottom: '30px',
+        fontSize: '1.3rem',
+        color: '#be185d',
+        marginBottom: '32px',
+        background: 'rgba(255, 228, 242, 0.7)',
+        padding: '16px 24px',
+        borderRadius: '12px',
+        boxShadow: '0 2px 8px #f9a8d4',
+        display: 'inline-block',
       }}>
         Uji kemampuan matematika dasar Anda.<br />
         Klik tombol di bawah untuk memulai kuis!
@@ -32,18 +42,22 @@ export default function HomePage() {
         <button
           style={{
             marginTop: '20px',
-            padding: '14px 32px',
-            fontSize: '1.1rem',
-            background: 'linear-gradient(90deg, #3b82f6 0%, #6366f1 100%)',
+            padding: '16px 36px',
+            fontSize: '1.2rem',
+            background: 'linear-gradient(90deg, #ec4899 0%, #f472b6 100%)',
             color: '#fff',
             border: 'none',
-            borderRadius: '8px',
-            boxShadow: '0 4px 16px rgba(59, 130, 246, 0.15)',
+            borderRadius: '12px',
+            boxShadow: '0 4px 16px rgba(236, 72, 153, 0.15)',
             cursor: 'pointer',
-            transition: 'background 0.3s',
+            fontWeight: 'bold',
+            letterSpacing: '1px',
+            transition: 'background 0.3s, transform 0.2s',
           }}
+          onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+          onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
         >
-          🚀 Mulai Kuis
+          💖 Mulai Kuis
         </button>
       </a>
     </div>

@@ -62,54 +62,54 @@ export default function QuizPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-pink-100 flex items-center justify-center p-4">
-      <div className="max-w-xl w-full bg-white rounded-2xl shadow-2xl p-8">
-        <h1 className="text-3xl font-bold text-indigo-700 mb-6 text-center">🎓 Kuis Matematika Dasar</h1>
-        <div className="flex justify-between items-center mb-4">
-          <span className="text-lg text-gray-600">Soal {currentQuestion + 1} dari {questions.length}</span>
-          <span className="text-lg text-indigo-700 font-semibold">Skor: {score}</span>
+    <div className="min-h-screen bg-gradient-to-br from-pink-200 via-pink-100 to-pink-300 flex items-center justify-center p-4">
+      <div className="max-w-xl w-full bg-white rounded-3xl shadow-2xl p-10 border-2 border-pink-300">
+        <h1 className="text-4xl font-extrabold text-pink-600 mb-8 text-center drop-shadow-lg">💖 Kuis Matematika Dasar</h1>
+        <div className="flex justify-between items-center mb-6">
+          <span className="text-lg text-pink-700 font-medium">Soal {currentQuestion + 1} dari {questions.length}</span>
+          <span className="text-lg text-pink-600 font-bold">Skor: {score}</span>
         </div>
-        <div className="w-full bg-gray-200 h-2 rounded mb-8">
+        <div className="w-full bg-pink-100 h-2 rounded mb-8">
           <div
-            className="bg-indigo-500 h-2 rounded transition-all duration-300"
+            className="bg-pink-400 h-2 rounded transition-all duration-300"
             style={{ width: `${((currentQuestion + (showScore ? 1 : 0)) / questions.length) * 100}%` }}
           ></div>
         </div>
         {showScore ? (
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-green-700 mb-4">Kuis Selesai! 🎉</h2>
-            <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <p className="text-3xl font-bold text-green-600 mb-2">{score}/{questions.length}</p>
-              <p className="text-green-700">
+            <h2 className="text-3xl font-bold text-pink-700 mb-4">Kuis Selesai! 🎉</h2>
+            <div className="bg-pink-50 p-8 rounded-xl mb-6 border border-pink-200">
+              <p className="text-4xl font-extrabold text-pink-600 mb-2">{score}/{questions.length}</p>
+              <p className="text-pink-700 text-lg">
                 Skor Anda: {Math.round((score / questions.length) * 100)}%
               </p>
             </div>
             <button
               onClick={resetQuiz}
-              className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors mb-3"
+              className="w-full bg-pink-500 text-white px-4 py-3 rounded-lg hover:bg-pink-600 transition-colors mb-3 font-bold shadow"
             >
-              Ulangi Kuis
+              🔄 Ulangi Kuis
             </button>
-        <Link href="/">
-        <a className="block w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">
-            Kembali ke Home
-        </a>
-        </Link>
+            <Link href="/" legacyBehavior>
+              <a className="block w-full bg-pink-300 text-white px-4 py-3 rounded-lg hover:bg-pink-400 transition-colors font-bold shadow">
+                ⬅️ Kembali ke Home
+              </a>
+            </Link>
           </div>
         ) : (
           <>
             <div className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-6">
+              <h2 className="text-2xl font-semibold text-pink-700 mb-6">
                 {questions[currentQuestion].question}
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {questions[currentQuestion].options.map((option, idx) => (
                   <label
                     key={idx}
-                    className={`block p-4 border-2 rounded-lg cursor-pointer transition-all ${
+                    className={`block p-4 border-2 rounded-xl cursor-pointer transition-all font-medium text-lg ${
                       selectedAnswer === option
-                        ? 'border-indigo-500 bg-indigo-50'
-                        : 'border-gray-200 hover:border-gray-300'
+                        ? 'border-pink-500 bg-pink-50'
+                        : 'border-pink-200 hover:border-pink-300'
                     }`}
                   >
                     <input
@@ -121,16 +121,16 @@ export default function QuizPage() {
                       className="sr-only"
                     />
                     <div className="flex items-center">
-                      <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
+                      <div className={`w-5 h-5 rounded-full border-2 mr-4 ${
                         selectedAnswer === option
-                          ? 'border-indigo-500 bg-indigo-500'
-                          : 'border-gray-400'
+                          ? 'border-pink-500 bg-pink-500'
+                          : 'border-pink-300'
                       }`}>
                         {selectedAnswer === option && (
-                          <div className="w-2 h-2 rounded-full bg-white m-0.5"></div>
+                          <div className="w-3 h-3 rounded-full bg-white m-1"></div>
                         )}
                       </div>
-                      <span className="text-gray-700">{option}</span>
+                      <span className="text-pink-700">{option}</span>
                     </div>
                   </label>
                 ))}
@@ -140,29 +140,29 @@ export default function QuizPage() {
               <button
                 onClick={handleAnswerSubmit}
                 disabled={!selectedAnswer}
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
+                className={`w-full py-3 px-6 rounded-xl font-bold transition-colors text-lg shadow ${
                   selectedAnswer
-                    ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    ? 'bg-pink-500 text-white hover:bg-pink-600'
+                    : 'bg-pink-200 text-pink-400 cursor-not-allowed'
                 }`}
               >
                 Jawab
               </button>
             ) : (
-              <div className="mt-6 text-center">
-                <div className={`text-lg font-bold mb-2 ${
+              <div className="mt-8 text-center">
+                <div className={`text-xl font-bold mb-3 ${
                   selectedAnswer === questions[currentQuestion].correct
                     ? 'text-green-600'
-                    : 'text-red-600'
+                    : 'text-red-500'
                 }`}>
-                  {selectedAnswer === questions[currentQuestion].correct ? 'Benar!' : 'Salah!'}
+                  {selectedAnswer === questions[currentQuestion].correct ? 'Benar! 🎉' : 'Salah!'}
                 </div>
-                <div className="text-gray-700 mb-4">
+                <div className="text-pink-700 mb-6 text-lg">
                   {questions[currentQuestion].explanation}
                 </div>
                 <button
                   onClick={handleNext}
-                  className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+                  className="bg-pink-500 text-white px-8 py-3 rounded-xl hover:bg-pink-600 transition-colors font-bold shadow"
                 >
                   {currentQuestion === questions.length - 1 ? 'Lihat Skor' : 'Soal Berikutnya'}
                 </button>
