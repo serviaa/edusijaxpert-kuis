@@ -8,7 +8,6 @@ export default function HomePage() {
         background: 'linear-gradient(135deg, #f9a8d4 0%, #fdf2f8 100%)',
         minHeight: '100vh',
         padding: '40px',
-        borderRadius: '24px',
         boxShadow: '0 8px 32px rgba(240, 46, 170, 0.15)',
         display: 'flex',
         flexDirection: 'column',
