@@ -5,7 +5,6 @@ export default function HomePage() {
     <div
       style={{
         textAlign: 'center',
-        marginTop: '60px',
         background: 'linear-gradient(135deg, #f9a8d4 0%, #fdf2f8 100%)',
         minHeight: '100vh',
         padding: '40px',
@@ -50,6 +49,7 @@ export default function HomePage() {
       <a href="/quiz" style={{ textDecoration: 'none' }}>
         <button
           style={{
+            marginTop: '20px',
             padding: '16px 36px',
             fontSize: '1.2rem',
             background: 'linear-gradient(90deg, #ec4899 0%, #f472b6 100%)',
